@@ -1,6 +1,7 @@
 # Alphabetizer
 
-- A simple alphabetizer that sorts items into a list by their first character. Recognizes characters from different languages.
-- Separate values by semicolon (;) or new line.
+- A simple sorter that organizes items into a list by their first character or length. Recognizes characters from different languages.
 
-- Able to add new separation methods.
+- Sort by A-Z, Z-A, Longest to Shortest, or Shortest to Longest.
+
+- Separate values by semicolon (;) or new line.
