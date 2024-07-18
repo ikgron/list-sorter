@@ -11,8 +11,6 @@ sortMethodLabel.style.color = 'white';
 const sortMethodSelect = document.createElement('select');
 sortMethodSelect.id = 'sortMethod';
 sortMethodSelect.classList.add('form-select-sm');
-sortMethodSelect.style.backgroundColor = 'black';
-sortMethodSelect.style.color = 'white';
 sortMethodSelect.addEventListener('change', sort);
 
 const option1 = document.createElement('option');
@@ -85,7 +83,7 @@ function updateSortedOutput(inputValue) {
         items = [inputValue];
     }
 
-    items = items.map(item => item.trim()).filter(item => item !== '');
+    items = items.map(item => item.trim().replace(/^(\s*-\s*\[\s*([xX]|\s)*\]\s*)/, ``)).filter(item => item !== ``);
 
     const sortMethod = document.getElementById('sortMethod').value;
     if (sortMethod === 'alphabetical') {
